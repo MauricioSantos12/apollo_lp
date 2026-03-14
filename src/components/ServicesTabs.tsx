@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { BarChart3, Cpu, Briefcase } from "lucide-react";
 import { Box, Grid, Heading, Text, Button, Flex } from "@chakra-ui/react";
 import CodeBlock from "./CodeBlock";

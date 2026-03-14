@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Box, Text } from "@chakra-ui/react";
 
 const QuoteSection = () => {

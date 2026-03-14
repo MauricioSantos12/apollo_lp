@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 
 const IdentitySection = () => {
