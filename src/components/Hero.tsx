@@ -13,7 +13,7 @@ const Hero = () => {
       alignItems="center"
       overflow="hidden"
       bg="black"
-      py={{ base: 12, md: 28 }}
+      py={{ base: 24, md: 28 }}
     >
       <Box
         position="absolute"
