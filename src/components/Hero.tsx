@@ -144,7 +144,7 @@ const Hero = () => {
               >
                 <Box
                   as="img"
-                  src="../../public/Apollo_White.png"
+                  src="/Apollo_White.png"
                   alt="Hero image Apollo"
                   w="full"
                   h="full"
