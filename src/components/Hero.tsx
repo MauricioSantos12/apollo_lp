@@ -63,7 +63,7 @@ const Hero = () => {
             >
               Decisiones <br />
               <Box as="span" color="whiteAlpha.400" fontStyle="italic">
-                científicas.
+                inteligentes
               </Box>
             </Heading>
 
@@ -74,9 +74,13 @@ const Hero = () => {
               mb={{ base: 6, md: 12 }}
               lineHeight="relaxed"
             >
-              Fusionamos la rigurosidad científica con la realidad industrial
-              para optimizar su toma de decisiones mediante IA y Ciencia de
-              Datos avanzada.
+              Combinamos el rigor científico con un enfoque práctico de negocio
+              para ayudar a las empresas a decidir mejor, operar con mayor
+              eficiencia y crecer con inteligencia. A través de analítica y
+              ciencia de datos, automatización e inteligencia artificial,
+              convertimos datos y capacidades tecnológicas en resultados
+              tangibles que impulsan el desempeño operativo, estratégico y
+              sostenible
             </Text>
 
             <Flex flexWrap="wrap" alignItems="center" gap={6}>

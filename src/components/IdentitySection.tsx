@@ -14,8 +14,8 @@ const IdentitySection = () => {
       px={6}
     >
       <Grid
-        templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
-        gap={{ base: 6, md: 12 }}
+        templateColumns={{ base: "1fr", lg: "repeat(1, 1fr)" }}
+        gap={{ base: 6, md: 8 }}
         alignItems="center"
       >
         <Box
@@ -30,78 +30,27 @@ const IdentitySection = () => {
             fontFamily="heading"
             fontWeight="bold"
             color="white"
+            textAlign={"center"}
             lineHeight={1.05}
             letterSpacing="tight"
-            mb={{ base: 6, md: 16 }}
+            mb={{ base: 6, md: 8 }}
           >
-            Nuestra <br />
+            Nuestra
             <Box as="span" color="whiteAlpha.400" fontStyle="italic">
               {" "}
-              identidad
+              enfoque
             </Box>
           </Heading>
           <Text
             fontSize={{ base: "sm", md: "xl" }}
             color="whiteAlpha.500"
+            textAlign={"center"}
             lineHeight="relaxed"
           >
-            Somos un equipo multidisciplinario de científicos y tecnólogos
-            apasionados por cerrar la brecha entre la investigación académica y
-            laimplementación industrial
+            Convertimos sus retos de negocio en soluciones que generan
+            resultados. Creamos e implementamos propuestas a la medida,
+            escalables y enfocadas en impacto, adopción y crecimiento sostenible
           </Text>
-        </Box>
-        <Box
-          as={motion.div}
-          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          position="relative"
-          display="flex"
-          justifyContent={{ base: "center", lg: "flex-end" }}
-        >
-          <Box
-            as={motion.div}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            display="grid"
-            gap={{ base: 6, md: 12 }}
-          >
-            <Box>
-              <Heading
-                as="h3"
-                fontSize="2xl"
-                fontFamily="heading"
-                fontWeight="bold"
-                color="white"
-                mb={4}
-              >
-                Democratizar la ciencia
-              </Heading>
-              <Text color="whiteAlpha.400" fontSize="sm" lineHeight="relaxed">
-                Hacemos que la alta tecnología científica sea accesible para
-                empresas de todos los tamaños, eliminando las barreras de
-                entrada a la innovación compleja y costosa.
-              </Text>
-            </Box>
-
-            <Box>
-              <Heading
-                as="h3"
-                fontSize="2xl"
-                fontFamily="heading"
-                fontWeight="bold"
-                color="white"
-                mb={4}
-              >
-                Referente en IA Ética
-              </Heading>
-              <Text color="whiteAlpha.400" fontSize="sm" lineHeight="relaxed">
-                Liderar la transición hacia una industria más inteligente y
-                humana, donde la inteligencia artificial se aplique con rigor
-                científico y responsabilidad ética.
-              </Text>
-            </Box>
-          </Box>
         </Box>
       </Grid>
     </Box>

@@ -40,9 +40,9 @@ const Contact = () => {
               fontWeight="bold"
               mb={8}
             >
-              Hablemos de <br />
+              Hablemos{" "}
               <Box as="span" color="whiteAlpha.400">
-                tu próximo proyecto.
+                de tu próximo proyecto
               </Box>
             </Heading>
             <Text
@@ -50,70 +50,9 @@ const Contact = () => {
               color="whiteAlpha.500"
               mb={{ base: 6, md: 12 }}
             >
-              Estamos listos para ayudarte a transformar tus datos en una
-              ventaja competitiva real mediante soluciones científicas.
+              Transformamos tus datos e ideas en una ventaja competitiva real,
+              mediante soluciones basadas en ciencia y enfocadas en resultados
             </Text>
-
-            <Flex direction="column" gap={8}>
-              <Flex align="center" gap={6}>
-                <Flex
-                  w={14}
-                  h={14}
-                  bg="zinc.900"
-                  border="1px solid"
-                  borderColor="whiteAlpha.100"
-                  borderRadius="2xl"
-                  align="center"
-                  justify="center"
-                >
-                  <Mail size={24} color="rgba(255,255,255,0.6)" />
-                </Flex>
-                <Box>
-                  <Text
-                    fontSize="10px"
-                    fontFamily="mono"
-                    color="whiteAlpha.400"
-                    textTransform="uppercase"
-                    letterSpacing="widest"
-                    mb={1}
-                  >
-                    Email
-                  </Text>
-                  <Text color="white" fontWeight="medium">
-                    contacto@apollo.ai
-                  </Text>
-                </Box>
-              </Flex>
-              <Flex align="center" gap={6}>
-                <Flex
-                  w={14}
-                  h={14}
-                  bg="zinc.900"
-                  border="1px solid"
-                  borderColor="whiteAlpha.100"
-                  borderRadius="2xl"
-                  align="center"
-                  justify="center"
-                >
-                  <Globe size={24} color="rgba(255,255,255,0.6)" />
-                </Flex>
-                <Box>
-                  <Text
-                    fontSize="10px"
-                    fontFamily="mono"
-                    color="whiteAlpha.400"
-                    textTransform="uppercase"
-                    letterSpacing="widest"
-                    mb={1}
-                  >
-                    Ubicación
-                  </Text>
-                  <Text color="white" fontWeight="medium">
-                    Global
-                  </Text>
-                </Box>
-              </Flex>
-            </Flex>
           </Box>
 
           <Box

@@ -26,9 +26,8 @@ const QuoteSection = () => {
           borderLeft={"4px solid"}
           borderColor={"apollo.secondary"}
         >
-          "Creemos que el futuro de la industria reside en la capacidad de
-          transformar datos brutos en conocimiento accionable mediante el rigor
-          del método científico."
+          El futuro de la industria reside en la capacidad de transformar datos
+          en conocimiento accionable mediante el rigor científico
         </Text>
       </Box>
     </Box>

@@ -46,26 +46,7 @@ const Footer = () => {
               </Text>
             </Text>
           </Stack>
-          <Flex gap={8}>
-            <Link
-              href="#"
-              color="whiteAlpha.600"
-              _hover={{ color: "white" }}
-              transition="colors 0.2s"
-              fontSize="xs"
-            >
-              <Linkedin width={16} />
-            </Link>
-            <Link
-              href="#"
-              color="whiteAlpha.600"
-              _hover={{ color: "white" }}
-              transition="colors 0.2s"
-              fontSize="xs"
-            >
-              <Github width={16} />
-            </Link>
-          </Flex>
+          <Flex gap={8}></Flex>
         </Flex>
       </Box>
     </Box>

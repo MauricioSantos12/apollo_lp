@@ -120,7 +120,7 @@ const Navbar = () => {
             _hover={{ bg: "apollo.secondary", color: "white" }}
             transition="all 0.2s"
           >
-            Hablemos
+            Contáctanos
           </Button>
         </Flex>
 

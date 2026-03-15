@@ -133,7 +133,7 @@ const ServicesTabs = () => {
           ],
         },
         {
-          title: "Cierre y Entrega",
+          title: "Transición y cierre",
           items: [
             "Documentación técnica",
             "Capacitación de equipos",
@@ -163,19 +163,8 @@ const ServicesTabs = () => {
             mb={6}
             letterSpacing="tight"
           >
-            Todo bajo tu control
+            Nuestros servicios
           </Heading>
-          <Text
-            fontSize={{ base: "sm", md: "xl" }}
-            color="whiteAlpha.500"
-            maxW="2xl"
-            mx="auto"
-            lineHeight="relaxed"
-          >
-            Todos los recursos que necesitas para gestionar tus datos,
-            automatizar procesos y garantizar el éxito de tus proyectos — sin
-            tiempo innecesario y costoso excesivo.
-          </Text>
         </Box>
 
         <Grid
@@ -264,10 +253,10 @@ const ServicesTabs = () => {
           >
             <Grid
               templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
-              gap={{ base: 6, md: 12 }}
+              gap={6}
               display={{ base: "flex", lg: "grid" }}
               alignItems={{ base: "", lg: "stretch" }}
-              flexDirection={{ base: "column-reverse", lg: "row" }}
+              flexDirection={{ base: "column", lg: "row" }}
             >
               <Box
                 w="full"
@@ -281,13 +270,10 @@ const ServicesTabs = () => {
                   lg: "full",
                 }}
               >
-                <CodeBlock
+                {/* <CodeBlock
                   code={services[activeTab].code}
                   language={services[activeTab].language}
-                />
-              </Box>
-
-              <Flex direction="column" justify="space-between" gap={8}>
+                /> */}
                 <Box>
                   <Heading
                     as="h3"
@@ -300,14 +286,19 @@ const ServicesTabs = () => {
                     {services[activeTab].title}
                   </Heading>
                   <Text
-                    fontSize="lg"
+                    fontSize="2xl"
                     color="whiteAlpha.500"
                     lineHeight="relaxed"
                     mb={8}
+                    maxW={{ base: "100%", md: "80%" }}
                   >
                     {services[activeTab].objective}
                   </Text>
+                </Box>
+              </Box>
 
+              <Flex direction="column" justify="space-between" gap={8}>
+                <Box>
                   <Grid
                     templateColumns={{ base: "1fr", sm: "repeat(2, 1fr)" }}
                     gap={4}
@@ -361,6 +352,70 @@ const ServicesTabs = () => {
                         </Box>
                       </Box>
                     ))}
+                    <Box
+                      position="relative"
+                      w="full"
+                      maxW={"100px"}
+                      m="0 auto"
+                      aspectRatio={1}
+                    >
+                      <Box
+                        position="absolute"
+                        inset={0}
+                        borderRadius="3xl"
+                        overflow="hidden"
+                        boxShadow="none"
+                        borderColor={"transparent"}
+                      >
+                        <Box
+                          as="img"
+                          src="/Apollo_White.png"
+                          alt="Hero image Apollo"
+                          w="full"
+                          h="full"
+                          objectFit="contain"
+                          borderRadius="3xl"
+                        />
+                        <Box
+                          position="absolute"
+                          inset={0}
+                          bgGradient="linear(to-tr, blackAlpha.800, blackAlpha.400, transparent)"
+                        />
+                      </Box>
+
+                      <Box
+                        as={motion.div}
+                        animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
+                        position="absolute"
+                        top="-40px"
+                        right="-40px"
+                        w={32}
+                        h={32}
+                        bg="whiteAlpha.50"
+                        backdropFilter="blur(60px)"
+                        border="1px solid"
+                        borderColor="whiteAlpha.100"
+                        borderRadius="2xl"
+                        zIndex={-10}
+                      />
+                      <Box
+                        as={motion.div}
+                        animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
+                        position="absolute"
+                        bottom="-40px"
+                        left="-40px"
+                        w={24}
+                        h={24}
+                        bg="apollo.secondary"
+                        opacity={0.4}
+                        backdropFilter="blur(60px)"
+                        border="1px solid"
+                        borderColor="apollo.secondary"
+                        borderColorOpacity={0.2}
+                        borderRadius="2xl"
+                        zIndex={-10}
+                      />
+                    </Box>
                   </Grid>
                 </Box>
               </Flex>
