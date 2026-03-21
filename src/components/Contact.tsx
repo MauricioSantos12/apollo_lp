@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
 import { motion } from "framer-motion";
-import { Mail, Globe, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import {
   Box,
   Grid,
@@ -12,10 +13,59 @@ import {
   Textarea,
   FormControl,
   FormLabel,
+  useToast,
 } from "@chakra-ui/react";
+
 
 const Contact = () => {
   const [status, setStatus] = useState<"idle" | "success">("idle");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const toast = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const result = await res.json();
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        toast({
+          title: "Mensaje enviado",
+          description: "Gracias por contactarnos. Te responderemos pronto.",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: result.error || "Error al enviar el mensaje.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Error al enviar el mensaje. Intenta de nuevo.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+      console.error(error);
+    }
+  };
 
   return (
     <Box
@@ -147,6 +197,10 @@ const Contact = () => {
                           outline: "none",
                         }}
                         transition="border-color 0.2s"
+                        value={formData.name}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
                       />
                     </FormControl>
                     <FormControl isRequired>
@@ -175,6 +229,10 @@ const Contact = () => {
                           outline: "none",
                         }}
                         transition="border-color 0.2s"
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
+                        value={formData.email}
                       />
                     </FormControl>
                   </Grid>
@@ -204,6 +262,10 @@ const Contact = () => {
                         outline: "none",
                       }}
                       transition="border-color 0.2s"
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
+                      value={formData.message}
                     />
                   </FormControl>
                   <Button
@@ -216,6 +278,7 @@ const Contact = () => {
                     fontWeight="bold"
                     _hover={{ bg: "apollo.secondary", color: "white" }}
                     transition="all 0.2s"
+                    onClick={handleSubmit}
                   >
                     Enviar mensaje
                   </Button>
