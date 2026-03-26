@@ -28,8 +28,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const to = "mauricio.santosr12@gmail.com";
-      // const to = import.meta.env.VITE_CONTACT_EMAIL;
+      const to = import.meta.env.VITE_CONTACT_EMAIL;
       const subject = `New message | Apollo Landing Page`;
       const boyHtml = `
         <div style="background-color:#f4f4f4;padding:40px 0;font-family:Arial,sans-serif;">
