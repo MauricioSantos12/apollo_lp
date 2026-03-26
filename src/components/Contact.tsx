@@ -16,7 +16,6 @@ import {
   useToast,
 } from "@chakra-ui/react";
 
-
 const Contact = () => {
   const [status, setStatus] = useState<"idle" | "success">("idle");
   const [formData, setFormData] = useState({
@@ -29,10 +28,28 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch("/api/contact", {
+      const to = "mauricio.santosr12@gmail.com";
+      // const to = import.meta.env.VITE_CONTACT_EMAIL;
+      const subject = `New message | Apollo Landing Page`;
+      const boyHtml = `
+        <div style="background-color:#f4f4f4;padding:40px 0;font-family:Arial,sans-serif;">
+        <div style="max-width:500px;margin:0 auto;background:#ffffff;border-radius:8px;padding:32px;">
+        <h2 style="margin:0 0 24px;text-align:center;">Nuevo mensaje de contacto</h2>
+        <p><strong>Nombre:</strong> ${formData?.name}</p>
+        <p><strong>Email:</strong> ${formData?.email}</p>
+        <hr style="border:none;border-top:1px solid #ddd;margin:16px 0;" />
+        <p style="white-space:pre-wrap;">${formData?.message}</p>
+        </div>
+        </div>`;
+
+      const res = await fetch(import.meta.env.VITE_CONTACT_API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          to,
+          subject,
+          body: boyHtml,
+        }),
       });
       const result = await res.json();
 
