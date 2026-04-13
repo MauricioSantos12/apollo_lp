@@ -108,7 +108,7 @@ const Contact = () => {
             >
               Hablemos{" "}
               <Box as="span" color="whiteAlpha.400">
-                de tu próximo proyecto
+                de tu próximo proyecto.
               </Box>
             </Heading>
             <Text
