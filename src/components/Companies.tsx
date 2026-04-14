@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
-import { Box, Grid, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Grid, Heading, Link, Stack } from "@chakra-ui/react";
 
 const CompaniesSection = () => {
   const images = [
     {
       src: "/Companies/helathrock.png",
       alt: "HealthRock Logo",
+      url: null,
     },
     {
       src: "Companies/pediatrics_clinic.png",
       alt: "Pediatrics clinic Logo",
+      url: "https://pediatricsclinicpanama.com/",
     },
   ];
 
@@ -64,7 +66,20 @@ const CompaniesSection = () => {
             {images &&
               images.map((image) => {
                 if (!image.src) return null;
-                return (
+                return image.url ? (
+                  <Link href={image?.url} isExternal>
+                    <Box
+                      as="img"
+                      src={image.src}
+                      alt={image.alt}
+                      w={{ base: "250px", md: "300px" }}
+                      h="full"
+                      objectFit="contain"
+                      borderRadius="3xl"
+                      filter={""}
+                    />
+                  </Link>
+                ) : (
                   <Box
                     as="img"
                     src={image.src}
