@@ -6,6 +6,7 @@ import IdentitySection from "./components/IdentitySection";
 import ServicesTabs from "./components/ServicesTabs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import CompaniesSection from "./components/Companies";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <QuoteSection />
         <IdentitySection />
         <ServicesTabs />
+        <CompaniesSection />
         <Contact />
       </Box>
       <Footer />
