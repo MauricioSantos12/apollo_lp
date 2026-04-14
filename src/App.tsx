@@ -17,8 +17,8 @@ export default function App() {
         <QuoteSection />
         <IdentitySection />
         <ServicesTabs />
-        <CompaniesSection />
         <Contact />
+        <CompaniesSection />
       </Box>
       <Footer />
     </Box>
