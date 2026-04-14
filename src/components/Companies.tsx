@@ -18,7 +18,7 @@ const CompaniesSection = () => {
   return (
     <Box
       as="section"
-      py={{ base: 12, md: 32 }}
+      pt={{ base: 12, md: 32 }}
       bg="black"
       borderTop="1px solid"
       borderColor="whiteAlpha.200"
