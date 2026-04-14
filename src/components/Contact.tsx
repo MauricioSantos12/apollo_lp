@@ -91,6 +91,8 @@ const Contact = () => {
       position="relative"
       overflow="hidden"
       bg="black"
+      borderTop="1px solid"
+      borderColor="whiteAlpha.200"
     >
       <Box maxW="6xl" mx="auto" px={6}>
         <Grid
