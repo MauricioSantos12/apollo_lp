@@ -57,6 +57,7 @@ const CompaniesSection = () => {
             flexDir={"row"}
             alignItems="center"
             justifyContent="center"
+            flexWrap={"wrap"}
             gap={4}
             p={4}
           >
@@ -68,7 +69,7 @@ const CompaniesSection = () => {
                     as="img"
                     src={image.src}
                     alt={image.alt}
-                    w="300px"
+                    w={{ base: "250px", md: "300px" }}
                     h="full"
                     objectFit="contain"
                     borderRadius="3xl"
