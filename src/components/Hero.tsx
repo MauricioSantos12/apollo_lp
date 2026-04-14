@@ -53,7 +53,7 @@ const Hero = () => {
           >
             <Heading
               as="h1"
-              fontSize={{ base: "4xl", md: "7xl", lg: "8xl" }}
+              fontSize={{ base: "4xl", md: "7xl", lg: "7xl" }}
               fontFamily="heading"
               fontWeight="bold"
               color="white"
@@ -68,7 +68,7 @@ const Hero = () => {
             </Heading>
 
             <Text
-              fontSize={{ base: "md", md: "xl" }}
+              fontSize={{ base: "md", md: "lg" }}
               color="whiteAlpha.500"
               maxW="lg"
               mb={{ base: 6, md: 12 }}
